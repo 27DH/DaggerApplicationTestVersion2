@@ -7,15 +7,26 @@ import android.widget.TextView;
 import com.dailyart.daggerapplicationtestversion2.secondtest.Shoe;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
     @Inject
+    @Named("original")
     Cloth cloth;
 
     @Inject
     Shoe shoe;
+
+    @Inject
+    @Named("red")
+    Cloth clothRed;
+
+    @Inject
+    @Named("blue")
+    Cloth clothBlue;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.myTextView);
         MainComponent build = DaggerMainComponent.builder().mainModule(new MainModule()).build();
         build.inject(this);
-        textView.setText(shoe.toString());
+        textView.setText(shoe.toString() + clothRed.toString() + clothBlue.toString());
 
 
     }
