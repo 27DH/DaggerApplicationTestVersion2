@@ -21,7 +21,7 @@ public class MainModule {
     }
 
     @Provides
-    @Named("red")
+    @Red("red")
     public Cloth getRedCloth(){
         Cloth cloth = new Cloth();
         cloth.setColor("红色");
@@ -29,7 +29,7 @@ public class MainModule {
     }
 
     @Provides
-    @Named("blue")
+    @Blue("blue")
     public Cloth getBlueCloth(){
         Cloth cloth = new Cloth();
         cloth.setColor("蓝色");

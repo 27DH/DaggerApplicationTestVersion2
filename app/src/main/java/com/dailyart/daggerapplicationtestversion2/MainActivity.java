@@ -20,11 +20,11 @@ public class MainActivity extends AppCompatActivity {
     Shoe shoe;
 
     @Inject
-    @Named("red")
+    @Red("red")
     Cloth clothRed;
 
     @Inject
-    @Named("blue")
+    @Blue("blue")
     Cloth clothBlue;
 
 
