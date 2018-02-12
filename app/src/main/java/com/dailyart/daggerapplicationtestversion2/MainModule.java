@@ -20,20 +20,14 @@ public class MainModule {
         return cloth;
     }
 
+    @PerActivity
     @Provides
-    @Red("red")
     public Cloth getRedCloth(){
         Cloth cloth = new Cloth();
         cloth.setColor("红色");
         return cloth;
     }
 
-    @Provides
-    @Blue("blue")
-    public Cloth getBlueCloth(){
-        Cloth cloth = new Cloth();
-        cloth.setColor("蓝色");
-        return cloth;
-    }
+
 
 }
